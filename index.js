@@ -26,6 +26,4 @@ window.addEventListener('scroll', () => {
             li.classList.add('active');
         }
     })
-})
-
-
+});
