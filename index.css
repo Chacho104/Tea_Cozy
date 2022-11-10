@@ -43,9 +43,12 @@ main {
     top: 5rem;
 }
 
+.logo {
+    margin-left: 20px;
+}
+
 .logo img {
     height: 40px;
-    margin-left: 20px;
 }
 
 .menubar {
@@ -227,7 +230,7 @@ footer {
     }
 
     .logo {
-        display: none;
+        margin-left: 10px;
     }
 
     nav {
