@@ -245,6 +245,9 @@ footer {
         padding: 7px 20px;
     }
 
+    figcaption {
+        font-size: 1rem;
+    }
     .locations {
         height: auto;
     }
