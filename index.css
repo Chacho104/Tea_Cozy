@@ -242,10 +242,11 @@ footer {
 
     .copyright {
         font-size: 1rem;
+        margin-left: 10px;
     }
     
     .socials {
-        margin-right: 20px;
+        margin-right: 10px;
     }
     
     .socials a {
@@ -285,7 +286,7 @@ footer {
     }
 
     nav ul li {
-        padding: 7px;
+        padding: 4px 7px;
     }
 
     nav ul li a {
