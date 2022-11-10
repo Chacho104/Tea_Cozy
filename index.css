@@ -10,9 +10,16 @@ html {
     scroll-behavior: smooth;
 }
 
+h1 {
+    margin: 70px 0 60px;
+    font-size: 3rem;
+}
+
+h2 {
+    color: #919090;
+}
+
 body {
-    position: relative;
-    top: 69px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,38 +30,48 @@ body {
 }
 
 header {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 69px;
-    border-bottom: 1px solid #fff5ee;
+    height: 5rem;
+    border-bottom: 1px solid #919090;
     background-color: #000;
     position: fixed;
     top: 0;
     z-index: 1000;
 }
 
+main {
+    position: relative;
+    top: 5rem;
+}
+
 .logo img {
-    height: 50px;
-    margin-left: 10px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.menubar {
+    display: none;
 }
 
 nav {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 nav ul {
+    display: flex;
     list-style: none;
 }
 
 nav ul li {
-    display: inline-block;
-    padding: 7px 15px;
+    padding: 7px 20px;
 }
 
 nav ul li.active {
     background-color: #775c1f;
+    transition: all 0.7s ease;
 }
 
 nav ul li a {
@@ -63,7 +80,7 @@ nav ul li a {
 }
 
 .banner {
-    height: 700px;
+    height: calc(100vh - 5rem);
     width: auto;
     margin: 0 60px;
     background-image: url('./Assets/Images/img-mission-background.jpg');
@@ -83,14 +100,21 @@ nav ul li a {
     background-color: #000;
 }
 
+.bannerContent h5 {
+    line-height: 1.6;
+    padding: 0 30px;
+    font-weight: 300;
+}
+
 .teas {
     text-align: center;
-    margin: 40px 0;
+    margin: 100px 0;
 }
 
 .media {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 figure img {
@@ -105,8 +129,8 @@ figcaption {
 .locations {
     background-image: url('./Assets/Images/img-locations-background.jpg');
     width: auto;
-    height: 600px;
-    margin: 0 60px;
+    height: 700px;
+    margin: 100px 60px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -117,25 +141,153 @@ figcaption {
 }
 
 .locationItems {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    column-gap: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
 }
 
 .item {
     background-color: #000;
     text-align: center;
+    width: 300px;
+    height: auto;
+}
+
+.item h5 {
+    color: #919090;
+}
+
+.testimonials {
+    min-height: 700px;
+    text-align: center;
+    margin: 100px 0;
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 200px;
-    text-align: center;
+    height: 70px;
+    border-top: 1px solid #919090;
 }
 
 .copyright {
-    margin: 0 50px;
+    color: #775c1f;
+    margin-left: 20px;
+
 }
 
+.socials {
+    margin-right: 20px;
+}
+
+.socials a {
+    color: #775c1f;
+    font-size: 1.5rem;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.socials a:hover {
+    color: #fff;
+}
+
+/*======= Responsiveness ========*/
+
+@media only screen and (max-width: 900px) {
+
+    .logo img {
+        height: 30px;
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1.15rem;
+    }
+
+    .banner {
+        width: 100%;
+        margin: 0;
+    }
+
+    .locations {
+        margin: 100px 0;
+    }
+
+    .locationItems {
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    header {
+        justify-content: stretch;
+    }
+
+    nav ul li {
+        padding: 7px 15px;
+    }
+
+    .locations {
+        height: auto;
+    }
+
+    .locationItems:last-child {
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+
+    header {
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        padding: 7px 20px;
+    }
+
+}
+
+@media only screen and (max-width: 451px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul li {
+        padding: 7px 15px;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+    
+    .socials {
+        margin-right: 20px;
+    }
+    
+    .socials a {
+        font-size: 1rem;
+    }
+}
