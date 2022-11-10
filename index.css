@@ -15,10 +15,6 @@ h1 {
     font-size: 3rem;
 }
 
-h2 {
-    color: #919090;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -236,8 +232,24 @@ footer {
         height: auto;
     }
 
+    .locations h2 {
+        color: #919090;
+    }
+
     .locationItems:last-child {
         padding-bottom: 50px;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+    
+    .socials {
+        margin-right: 20px;
+    }
+    
+    .socials a {
+        font-size: 1rem;
     }
 }
 
@@ -277,17 +289,5 @@ footer {
 
     nav ul li a {
         font-size: 0.95rem;
-    }
-
-    .copyright {
-        font-size: 1rem;
-    }
-    
-    .socials {
-        margin-right: 20px;
-    }
-    
-    .socials a {
-        font-size: 1rem;
     }
 }
